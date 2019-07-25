@@ -22,8 +22,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from lavender device
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Arcore
+TARGET_INCLUDE_STOCK_ARCORE := true
+
+# Inherit some common PixelExperience stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+TARGET_MINIMAL_APPS := false
+CUSTOM_BUILD_TYPE := OFFICIAL
 
 PRODUCT_NAME := aosp_lavender
 PRODUCT_BRAND := Xiaomi
