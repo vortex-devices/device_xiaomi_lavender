@@ -6,8 +6,8 @@
   },
   {
     "remote":      "github",
-    "repository":  "rama982/android_kernel_xiaomi_lavender",
+    "repository":  "vortex-devices/android_kernel_xiaomi_lavender",
     "target_path": "kernel/xiaomi/platina",
-    "branch":      "aosp-hmp-pie"
+    "branch":      "aosp-pie"
   }
 ]
