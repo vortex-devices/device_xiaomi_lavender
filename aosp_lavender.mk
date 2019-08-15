@@ -1,5 +1,6 @@
 # 
 # Copyright (C) 2018 The Mokee Project
+# Copyright (C) 2018 The Vortex OS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,12 +26,11 @@ $(call inherit-product, device/xiaomi/lavender/device.mk)
 # Arcore
 TARGET_INCLUDE_STOCK_ARCORE := true
 
-# Inherit some common PixelExperience stuff.
+# Inherit some common Vortex OS stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-TARGET_MINIMAL_APPS := false
-CUSTOM_BUILD_TYPE := OFFICIAL
+
+#OFFICIAL TAG
+export CUSTOM_BUILD_TYPE=OFFICIAL
 
 PRODUCT_NAME := aosp_lavender
 PRODUCT_BRAND := Xiaomi
@@ -45,18 +45,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="lavender" \
     PRIVATE_BUILD_DESC="lavender-user 9 PKQ1.180904.001 V10.3.6.0.PFGMIXM release-keys"
 
-BUILD_FINGERPRINT := "xiaomi/lavender/lavender:9/PKQ1.180904.001/V10.3.6.0.PFGMIXM:user/release-keys"
+    BUILD_FINGERPRINT := "xiaomi/lavender/lavender:9/PKQ1.180904.001/V10.3.6.0.PFGMIXM:user/release-keys"
 
 TARGET_VENDOR := Xiaomi
 
 # Use Jelly
 TARGET_USE_JELLY := true
-
-# Set this flag in build script
-ifeq ($(CURRENT_BUILD_TYPE), gapps)
-# Use Gapps
-TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
-WITH_GAPPS := true
-TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
-endif
