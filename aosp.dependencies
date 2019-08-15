@@ -6,8 +6,8 @@
   },
   {
     "remote":      "github",
-    "repository":  "vortex-devices/android_kernel_xiaomi_lavender",
+    "repository":  "melvingb/android_kernel_xiaomi_lavender",
     "target_path": "kernel/xiaomi/platina",
-    "branch":      "aosp-pie"
+    "branch":      "mkp"
   }
 ]
