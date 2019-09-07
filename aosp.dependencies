@@ -8,6 +8,6 @@
     "remote":      "github",
     "repository":  "rama982/android_kernel_xiaomi_lavender",
     "target_path": "kernel/xiaomi/lavender",
-    "branch":      "aosp-hmp-pie"
+    "branch":      "pie-hmp"
   }
 ]
